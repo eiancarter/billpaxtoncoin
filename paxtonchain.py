@@ -14,7 +14,7 @@ class Paxtonchain(object):
 
         self.new_block(previous_hash=1, proof=100)
         
-    def new_block(self):
+    def new_block(self, previous_hash, proof):
         # Creates a new Block and adds it to the chain
         block = {
             'index': len(self.chain) + 1,
