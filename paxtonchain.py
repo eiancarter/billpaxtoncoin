@@ -4,10 +4,11 @@ from time import time
 from textwrap import dedent
 from uuid import uuid4
 
+import requests
 from flask import Flask, jsonify, request
 
 
-class Paxtonchain(object):
+class Paxtonchain:
     def __init__(self):
         self.chain = []
         self.current_transactions = []
@@ -111,5 +112,5 @@ def full_chain():
     }
     return jsonify(response), 200
 
-if __name__ == 'main':
-    app.run(host='0.0.0.0', port = 5000)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
